@@ -1,21 +1,53 @@
 body {
   background-color: aqua;
+  /*no content goes outside our page*/
+  overflow: hidden;
+  margin: 0;
+  font-family: poppins;
 }
+
 #main-doc {
   display: grid;
   grid-template-columns: 1fr 5fr;
-  grid-template-rows: 1fr;
-  width: 100%;
-  margin: auto;
+  grid-template-rows: auto;
+  width: 100vw;
+  height: 100vh;
   background-color: rgb(200, 255, 0);
+  /*nothing goes outside our main page*/
+  overflow: hidden;
 }
 
 #navbar {
   background-color: blueviolet;
   grid-area: 1/1/2/2;
+  overflow-y: scroll;
+  font-size: 23px;
+  padding: 40px 15px 40px 15px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 3rem 2rem 2rem 2rem 2rem 2rem;
 }
 
-#main-page {
+#section-container {
   background-color: brown;
   grid-area: 1/2/2/3;
+  overflow-y: scroll;
+  padding: 0px 15px 0px 15px;
+}
+
+.main-section {
+  padding: 20px 15px 20px 15px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: darkred;
+  font-size: 17px;
+  background-color: blue;
+}
+
+code {
+  background-color: rgb(208, 212, 216);
+  border-radius: 5px;
+  padding: 15px;
 }
